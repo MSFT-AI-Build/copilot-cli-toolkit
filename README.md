@@ -6,8 +6,8 @@
 
 | 경로 | 설명 |
 |---|---|
-| `init.sh` | 초기 환경 설정 (Copilot CLI, Azure CLI 설치) |
-| `copilot_foundry.sh` | BYOK + OFFLINE_MODE로 Microsoft Foundry 연결 스크립트 |
+| `scripts/init.sh` | 초기 환경 설정 (Copilot CLI, Azure CLI 설치) |
+| `scripts/copilot_foundry.sh` | BYOK + OFFLINE_MODE로 Microsoft Foundry 연결 스크립트 |
 | `samples/` | Copilot CLI 활용 예제 모음 |
 | `.env` | Azure OpenAI 엔드포인트/키 설정 (Git 추적 제외) |
 | `AGENTS.md` | AI 에이전트 보안 하네스 가이드라인 |
@@ -17,8 +17,8 @@
 ### 1. 초기 환경 설정
 
 ```bash
-./init.sh          # Copilot CLI + Azure CLI 설치
-./init.sh --check  # 설치 상태만 확인
+./scripts/init.sh          # Copilot CLI + Azure CLI 설치
+./scripts/init.sh --check  # 설치 상태만 확인
 ```
 
 ### 2. 도구 선택
@@ -46,9 +46,9 @@ AZURE_OPEN_AI_MODEL=gpt-5.3-codex
 ### 실행 방법
 
 ```bash
-./copilot_foundry.sh                    # 인터랙티브 모드
-./copilot_foundry.sh -p "질문 내용"     # 프롬프트 직접 전달
-source copilot_foundry.sh --env-only    # 환경변수만 export (copilot 실행 안 함)
+./scripts/copilot_foundry.sh                    # 인터랙티브 모드
+./scripts/copilot_foundry.sh -p "질문 내용"     # 프롬프트 직접 전달
+source scripts/copilot_foundry.sh --env-only    # 환경변수만 export (copilot 실행 안 함)
 ```
 
 ### 동작 흐름
